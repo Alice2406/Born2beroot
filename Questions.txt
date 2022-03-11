@@ -1,0 +1,47 @@
+Comment une machine virtuelle fonctionne ?
+    • Une machine virtuelle fonctionne grâce a la technologie de virtualisation. La virtualisation nous permet de partager un système avec plusieurs environnements virtuels.
+
+Mon choix de système d’exploitation 
+    • Debian
+
+Les différences entre Debian et CentOS ?
+CentOS										Debian
+Pris en charge par la communauté Red Hat				Pris en charge par des particuliers de Debian
+CentOS a un grand marché en raison de sa nature conviviale 		Debian manque de présence sur le marché en raison de son 
+								utilisation finale du terminale
+Centos ne prend pas en charge plusieurs architectures		Debian prend en charge plusieurs architectures en comparaison 
+								avec les autres distributions
+Les nouvelles Maj prennent généralement du temps 
+ce qui les rend stables.						Il y a un cycle publication de 2 ans ce qui laisse le temps 
+								de corriger les bugs 
+Il est préférable d’installer une nouvelles version 
+de CentOS que de mettre a jour l’ancienne version.
+								Debian peut facilement être mis a jour d’une version stable à 
+								une autre
+CentOS a une interface graphique compliquée 			Debian est livré avec des applications conviviales et une 
+								interface graphique
+CentOS utilise YUM(Yellowdog Updater Modified) 
+comme gestionnaire de package					Debian utilise apt-get comme gestionnaire de package.
+CentOS a une quantité limite de package 				Debian a une vaste quantité de package dans son repo par défauts.
+
+Le but d’une machine virtuelle ?
+    • Les machines virtuelles peuvent être déployées pour répondre a différents niveaux de besoins en puissance de traitement, pour exécuter des logiciels qui nécessitent un autre système d’exploitation ou pour tester des applications. Une machine virtuelle est un logiciel capable d'installer un système d'exploitation en lui-même, faisant croire au système d'exploitation qu'il est hébergé sur un ordinateur réel.
+
+La différence entre aptitude et apt ? Qu’est ce que APPArmor ?
+    • Aptitude est un gestionnaire de package de haut niveau alors que Apt est un gestionnaire de package moyen qui peut être utiliser par des gestionnaire de package de niveau supérieur.
+    • AppArmor fournit la sécurité du contrôle d'accès obligatoire (MAC). En fait, AppAmor permet à l'administrateur système de restreindre les actions que les processus peuvent effectuer.
+
+Comment LVM fonctionne et qu’est-ce que c’est ?
+    • LVM (Logical Volume Manager) est une couche d'abstraction entre un périphérique de stockage et un système de fichiers. En utilisant LVM, nous pouvons étendre le stockage de n'importe quelle partition quand nous le voulons sans nous soucier de l'espace contigu disponible sur chaque volume logique. Nous pouvons le faire avec le stockage disponible situé sur différents disques physiques (ce que nous ne pouvons pas faire avec les partitions traditionnelles). 
+
+Qu’est ce que Sudo ?
+    • sudo permet à un administrateur système de donner à un utilisateur (ou un groupe d'utilisateurs) la possibilité d'exécuter une ou plusieurs commandes en tant que super utilisateur, tout en gardant une trace des commandes tapées et en demandant un mot de passe à l’utilisateur avant d’exécuter sa commande.
+
+Qu’est ce que UFW ?
+    • UFW (Uncomplicated Firewall) est une application logicielle chargée de garantir que l'administrateur système peut gérer iptables de manière simple. Iptables est une interface en ligne de commande permettant de configurer Netfilter.
+
+Qu’est ce que SSH ?
+    • SSH ou Secure Shell est un protocole d'administration à distance qui permet aux utilisateurs de contrôler et de modifier leurs serveurs sur Internet grâce à un mécanisme d’authentification.
+
+Qu’est ce que cron ?
+    • gestionnaire de tâches Linux qui nous permet d'exécuter des commandes à un certain moment. Nous pouvons automatiser certaines tâches simplement en indiquant à cron quelle commande nous voulons exécuter à un moment précis. Par exemple, si nous voulons redémarrer notre serveur tous les jours à 4h00, au lieu de devoir nous réveiller à cette heure-là, cron le fera pour nous.
