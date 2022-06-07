@@ -1,0 +1,132 @@
+Différence entre CentOS et Debian
+
+CentOS vs Debian sont deux versions des systèmes d'exploitation Linux. CentOS, comme indiqué ci-dessus, est une distribution Linux. Il est gratuit et open-source. 
+C'est de classe entreprise - les industries peuvent utiliser le sens pour la construction de serveurs ; il est pris en charge par une grande communauté et est 
+fonctionnellement pris en charge par sa source en amont, Red Hat Enterprise Linux. Debian est un système d'exploitation informatique de type Unix composé de composants open source. 
+Il est construit et soutenu par un groupe d'individus qui font partie du projet Debian.
+
+Debian utilise Linux comme noyau. Fedora, CentOS, Oracle Linux sont tous des distributions différentes de Red Hat Linux et sont des variantes de RedHat Linux. 
+Ubuntu, Kali, etc., sont des variantes de Debian. CentOS vs Debian sont tous deux utilisés comme serveurs Internet ou serveurs Web tels que Web, e-mail, FTP, etc.
+
+Différence entre APT et Aptitude
+
+Outre la principale différence étant qu'Aptitude est un gestionnaire de packages de haut niveau tandis qu'APT est un gestionnaire de packages de niveau inférieur 
+qui peut être utilisé par d'autres gestionnaires de packages de niveau supérieur, les autres points forts qui séparent ces deux gestionnaires de packages sont :
+
+Aptitude est plus riche en fonctionnalités qu'apt-get et intègre les fonctionnalités d'apt-get et de ses autres variantes, notamment apt-mark et apt-cache. 
+Alors qu'apt-get gère toutes les installations de packages, la mise à niveau, la mise à niveau du système, la purge des packages, la résolution des dépendances, etc., 
+Aptitude gère beaucoup plus de choses qu'apt, y compris les fonctionnalités apt-mark et apt-cache, c'est-à-dire trouver un package dans la liste des packages installés, 
+marquer un package à installer automatiquement ou manuellement, contenir un package le rendant indisponible pour la mise à niveau, etc.
+
+Qu'est-ce qu'AppArmor ?
+
+AppArmor (Application Armor) est un logiciel de sécurité pour les systèmes Linux réalisé sous licence publique générale GNU.
+
+AppArmor permet à l'administrateur système d'associer à chaque programme un profil de sécurité qui limite ses accès au système d'exploitation.
+Il complète la méthode traditionnelle de contrôle d'accès discrétionnaire (DAC) d'Unix en permettant l'utilisation du contrôle d'accès obligatoire (MAC).
+
+Qu'est-ce qu'une machine virtuelle ?
+
+Une machine virtuelle est un logiciel capable d'installer un système d'exploitation en lui-même, faisant croire au système d'exploitation qu'il est hébergé sur un ordinateur réel. 
+Avec les machines virtuelles, nous pouvons créer des périphériques virtuels qui se comporteront de la même manière que les périphériques physiques, en utilisant leur propre CPU, mémoire, interface réseau et stockage. 
+Cela est possible car la machine virtuelle est hébergée sur un périphérique physique, qui est celui qui fournit les ressources matérielles à la VM. 
+Le logiciel qui crée les machines virtuelles est l'hyperviseur. L'hyperviseur est chargé d'isoler les ressources de la machine virtuelle du matériel du système 
+et d'effectuer les implémentations nécessaires pour que la machine virtuelle puisse utiliser ces ressources.
+Les périphériques qui fournissent les ressources matérielles sont appelés machines hôtes ou hôtes. Les différentes machines virtuelles pouvant être affectées à un hôte sont appelées invités ou machines invitées.
+L'hyperviseur utilise une partie du CPU, du stockage, etc. de la machine hôte et les répartit entre les différentes VM.
+
+Il peut y avoir plusieurs machines virtuelles sur le même hôte et chacune d'entre elles sera isolée du reste du système. 
+Grâce à cela, nous pouvons exécuter différents systèmes d'exploitation sur notre machine. Pour chaque machine virtuelle, nous pouvons exécuter une distribution de système d'exploitation différente. 
+Chacun de ces systèmes d'exploitation se comportera comme s'il était hébergé sur un périphérique physique, nous aurons donc la même expérience lors de l'utilisation d'un système d'exploitation 
+sur une machine physique et sur une machine virtuelle.
+
+Comment fonctionnent les machines virtuelles ?
+
+La virtualisation nous permet de partager un système avec plusieurs environnements virtuels. L'hyperviseur gère le système matériel et sépare les ressources physiques des environnements virtuels.
+Les ressources sont gérées en fonction des besoins, de l'hôte aux invités. Lorsqu'un utilisateur d'une machine virtuelle effectue une tâche nécessitant des ressources supplémentaires de l'environnement physique,
+l'hyperviseur gère la demande afin que l'OS invité puisse accéder aux ressources de l'environnement physique.
+Une fois que nous savons comment elles fonctionnent, il est bon de voir tous les avantages que nous tirons de l'utilisation des machines virtuelles :
+
+Différentes machines invitées hébergées sur notre ordinateur peuvent exécuter différents systèmes d'exploitation, nous aurons donc différents systèmes d'exploitation fonctionnant sur la même machine.
+Ils fournissent un environnement dans lequel tester en toute sécurité des programmes instables pour voir s'ils affecteront ou non le système.
+Nous obtenons une meilleure utilisation des ressources partagées.
+Nous réduisons les coûts en réduisant l'architecture physique.
+Ils sont faciles à mettre en œuvre car ils fournissent des mécanismes pour cloner une machine virtuelle sur un autre périphérique physique.
+
+Qu'est-ce que LVM ?
+
+LVM (Logical Volume Manager) est une couche d'abstraction entre un périphérique de stockage et un système de fichiers.
+Nous tirons de nombreux avantages de l'utilisation de LVM, mais le principal avantage est que nous avons beaucoup plus de flexibilité en matière de gestion des partitions.
+Supposons que nous créons quatre partitions sur notre disque de stockage. Si pour une raison quelconque nous devons étendre le stockage des trois premières partitions,
+nous ne pourrons pas le faire car il n'y a pas d'espace disponible à côté d'eux. Dans le cas où nous voulons étendre la dernière partition, nous aurons toujours la limite imposée par le disque.
+En d'autres termes, nous ne pourrons pas manipuler les partitions de manière conviviale. Grâce à LVM, tous ces problèmes sont résolus.
+En utilisant LVM, nous pouvons étendre le stockage de n'importe quelle partition (maintenant appelée volume logique) quand nous le voulons sans nous soucier de l'espace contigu disponible sur chaque volume logique.
+Nous pouvons le faire avec le stockage disponible situé sur différents disques physiques (ce que nous ne pouvons pas faire avec les partitions traditionnelles). 
+Nous pouvons également déplacer différents volumes logiques entre des périphériques physiques. Bien sûr, les services et les processus fonctionneront de la même manière qu'ils l'ont toujours fait. 
+Mais pour comprendre tout cela, il faut savoir :
+
+Volume Physique (PV) : périphérique de stockage physique. Il peut s'agir d'un disque dur, d'une carte SD, d'une disquette, etc. Cet appareil nous fournit un stockage disponible à utiliser.
+Volume Group (VG) : pour utiliser l'espace fourni par un PV, il doit être alloué dans un volume group. C'est comme un disque de stockage virtuel qui sera utilisé par des volumes logiques. 
+Les VG peuvent se développer au fil du temps en ajoutant de nouveaux VP.
+Volume logique (LV) : ces périphériques seront ceux que nous utiliserons pour créer des systèmes de fichiers, des swaps, des machines virtuelles, etc. Si le VG est le disque de stockage, 
+les LV sont les partitions qui sont faites sur ce disque.
+
+Qu'est-ce qu'AppArmor ?
+
+AppArmor fournit la sécurité du contrôle d'accès obligatoire (MAC). En fait, AppAmor permet à l'administrateur système de restreindre les actions que les processus peuvent effectuer. 
+Par exemple, si une application installée peut prendre des photos en accédant à l'application appareil photo, mais que l'administrateur refuse ce privilège, 
+l'application ne pourra pas accéder à l'application appareil photo. Si une vulnérabilité survient (certaines des tâches restreintes sont exécutées), 
+AppArmor bloque l'application afin que les dommages ne se propagent pas au reste du système.
+Dans AppArmor, les processus sont limités par des profils. Les profils peuvent fonctionner en mode plainte et en mode application. En mode application, AppArmor interdit l'application
+d'effectuer des tâches restreintes. En mode plainte, AppArmor permet aux applications d'effectuer ces tâches, mais crée une entrée de registre pour afficher la plainte.
+
+Quelle est la différence entre Apt et Aptitute ?
+
+Dans les distributions de système d'exploitation basées sur Debian, le gestionnaire de paquets par défaut que nous pouvons utiliser est dpkg. 
+Cet outil nous permet d'installer, de supprimer et de gérer des programmes sur notre système d'exploitation. Cependant, dans la plupart des cas, 
+ces programmes sont livrés avec une liste de dépendances qui doivent être installées pour que le programme principal fonctionne correctement. Une option consiste à installer manuellement ces dépendances. 
+Cependant, APT (Advanced Package Tool), qui est un outil qui utilise dpkg, peut être utilisé pour installer toutes les dépendances nécessaires lors de l'installation d'un programme.
+ Alors maintenant, nous pouvons installer un programme utile avec une seule commande.
+APT peut travailler avec différents back-ends et fron-ends pour utiliser ses services. L'un d'eux est apt-get, qui nous permet d'installer et de supprimer des packages. 
+Outre apt-get, il existe également de nombreux outils comme apt-cache pour gérer les programmes. Dans ce cas, apt-get et apt-cache sont utilisés par apt.
+Grâce à apt, nous pouvons installer des programmes .deb facilement et sans nous soucier des dépendances. Mais au cas où nous voudrions utiliser une interface graphique, nous devrons utiliser aptitude.
+Aptitude fait également un meilleur contrôle des dépendances, permettant à l'utilisateur de choisir entre différentes dépendances lors de l'installation d'un programme.
+
+Comment utiliser SSH ?
+
+SSH ou Secure Shell est un protocole d'administration à distance qui permet aux utilisateurs de contrôler et de modifier leurs serveurs sur Internet grâce à un mécanisme d'authentification. 
+Fournit un mécanisme pour authentifier un utilisateur à distance, transférer des données du client vers l'hôte et renvoyer une réponse à la demande faite par le client.
+SSH a été créé comme une alternative à Telnet, qui ne crypte pas les informations envoyées. SSH utilise des techniques de cryptage pour garantir que toutes les communications client-hôte 
+et hôte-client se font sous forme cryptée. L'un des avantages de SSH est qu'un utilisateur utilisant Linux ou MacOS peut utiliser SSH sur son serveur pour communiquer avec lui à 
+distance via le terminal de son ordinateur. Une fois authentifié, cet utilisateur pourra utiliser le terminal pour travailler sur le serveur.
+
+
+Il existe trois techniques différentes que SSH utilise pour chiffrer :
+
+Chiffrement symétrique : méthode qui utilise la même clé secrète pour le chiffrement et le déchiffrement d'un message, à la fois pour le client et pour l'hôte. 
+Toute personne connaissant le mot de passe peut accéder au message transmis.
+Chiffrement asymétrique : utilise deux clés distinctes pour le chiffrement et le déchiffrement. Celles-ci sont connues sous le nom de clé publique et de clé privée. 
+Ensemble, ils forment la paire de clés publique-privée.
+Hachage : autre forme de cryptographie utilisée par SSH. Les fonctions de hachage sont conçues de manière à ne pas avoir besoin d'être déchiffrées. 
+Si un client a la bonne entrée, il peut créer un hachage cryptographique et SSH vérifiera si les deux hachages sont identiques.
+
+Comment implémenter UFW avec SSH ?
+
+UFW (Uncomplicated Firewall) est une application logicielle chargée de garantir que l'administrateur système peut gérer iptables de manière simple. 
+Comme il est très difficile de travailler avec iptables, UFW nous fournit une interface pour modifier le pare-feu de notre appareil (netfilter) sans compromettre la sécurité. 
+Une fois que nous avons installé UFW, nous pouvons choisir quels ports nous voulons autoriser les connexions et quels ports nous voulons fermer. Cela sera également très utile avec SSH, 
+améliorant considérablement toute la sécurité liée aux communications entre appareils.
+
+Qu'est-ce que cron et qu'est-ce que wall ?
+
+Une fois que nous en saurons un peu plus sur la façon de construire un serveur à l'intérieur d'une machine virtuelle, nous verrons deux commandes qui seront très utiles en cas d'administrateur système. 
+Ces commandes sont :
+Cron : gestionnaire de tâches Linux qui nous permet d'exécuter des commandes à un certain moment. Nous pouvons automatiser certaines tâches 
+simplement en indiquant à cron quelle commande nous voulons exécuter à un moment précis. 
+Par exemple, si nous voulons redémarrer notre serveur tous les jours à 4h00, au lieu de devoir nous réveiller à cette heure-là, cron le fera pour nous.
+Wall : commande utilisée par l'utilisateur root pour envoyer un message à tous les utilisateurs actuellement connectés au serveur. 
+Si l'administrateur système souhaite alerter d'un changement majeur du serveur qui pourrait entraîner la déconnexion des utilisateurs, l'utilisateur root peut les alerter avec wall.
+
+Qu’est ce que Sudo ?
+sudo permet à un administrateur système de donner à un utilisateur (ou un groupe d'utilisateurs) la possibilité d'exécuter une ou plusieurs commandes en tant que super utilisateur, 
+tout en gardant une trace des commandes tapées et en demandant un mot de passe à l’utilisateur avant d’exécuter sa commande.
